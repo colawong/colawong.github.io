@@ -106,5 +106,5 @@ search:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 'git'
-  repository: https://github.com/colawong/colawong.github.io.git
+  repository: git@github.com:colawong/colawong.github.io.git
   branch: master
