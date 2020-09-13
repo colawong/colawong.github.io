@@ -1,5 +1,5 @@
 ---
-title: 标签
+title: 分类
 type: categories
 comments: false
 ---
