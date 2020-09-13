@@ -84,11 +84,10 @@ tags:
 
 # Markdown All in One
 
-![](./markdown-的使用/%20table.png)
 
-test
 
-{% asset_img table.png This is an example image %}
+![](https://github.com/colawong/colawong.github.io/blob/master/source/_posts/markdown-%E7%9A%84%E4%BD%BF%E7%94%A8/%20table.png?raw=true)
+
 
 | 快捷键                                       | 命令     |
 | -------------------------------------------- | -------- |
