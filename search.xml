@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于七星小区停车费-20200914</title>
+    <url>/2020/09/14/%E5%85%B3%E4%BA%8E%E4%B8%83%E6%98%9F%E5%B0%8F%E5%8C%BA%E5%81%9C%E8%BD%A6%E8%B4%B9-20200914/</url>
+    <content><![CDATA[<h1 id="存在的问题："><a href="#存在的问题：" class="headerlink" title="存在的问题："></a>存在的问题：</h1><ol>
+<li>谁发布，谁收费，未明确主体；</li>
+<li>车位所有权属于业主，物业违反《物权法》，未经过2/3业主同意；</li>
+<li>具体的措施在哪里，不能只是以规范小区停车秩序这八字</li>
+</ol>
+<h1 id="伤心的事："><a href="#伤心的事：" class="headerlink" title="伤心的事："></a>伤心的事：</h1><p>  明明有法可依，还要被所有人说错的人是我。作为一个快30的人，上有父母，下有儿子，老父母觉得我给他们丢人了，可明明错的不是我，可悲。想到我家可乐长大以后还要生活在这个社会里，可悲。法制社会在哪里？为了儿子，我想我应该要做点什么。</p>
+]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>python No.1</title>
+    <url>/2020/09/13/python-No-1/</url>
+    <content><![CDATA[<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h1><ul>
+<li>当语句以冒号:结尾时，缩进的语句视为代码块,使用4个空格的缩进;</li>
+<li>Python程序是大小写敏感的;</li>
+<li>Python允许在数字中间以 <code>_</code> 分隔;</li>
+<li>用全部大写的变量名表示常量只是一个习惯上的用法</li>
+<li>内存中Unicode，存储用UTF-8</li>
+<li>无法显示为ASCII字符的字节，用<code>\x##</code>显示</li>
+<li>转意，用<code>%%</code>来表示一个<code>%</code></li>
+<li>f-string ,以f开头的字符串以对应的变量替换</li>
+</ul>
+<h2 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h2><ul>
+<li><code>//</code>  地板除；</li>
+<li><code>%</code>   取余数；</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ord()</code></td>
+<td>获取字符的整数表示</td>
+</tr>
+<tr>
+<td><code>chr()</code></td>
+<td>把编码转换为对应的字符</td>
+</tr>
+<tr>
+<td><code>encode()</code></td>
+<td>编码为指定的bytes</td>
+</tr>
+<tr>
+<td><code>decode()</code></td>
+<td>将bytes变为字符,传入参数<code>errors=&#39;ignore&#39;</code>可忽略错误的字节</td>
+</tr>
+<tr>
+<td><code>len()</code></td>
+<td>计算字符串包含多少个字符或字节数</td>
+</tr>
+<tr>
+<td><code>format()</code></td>
+<td>用传入的参数依次替换字符串内的占位符{0}、{1}</td>
+</tr>
+</tbody></table>
+<h2 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h2><table>
+<thead>
+<tr>
+<th>占位符</th>
+<th>替换内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>%d</code></td>
+<td>整数</td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td>浮点数</td>
+</tr>
+<tr>
+<td><code>%s</code></td>
+<td>字符串</td>
+</tr>
+<tr>
+<td><code>%x</code></td>
+<td>十六进制整数</td>
+</tr>
+</tbody></table>
+<h2 id="list和tuple"><a href="#list和tuple" class="headerlink" title="list和tuple"></a>list和tuple</h2><ol>
+<li><code>list</code>是一个可变的有序数表,<code>[a,b,c]</code><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>append()</td>
+<td>追加元素到末尾</td>
+</tr>
+<tr>
+<td>insert（）</td>
+<td>在指定位置插入元素</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>删除list指定的元素</td>
+</tr>
+</tbody></table>
+</li>
+<li><code>tuple</code>是初始化后不可变的有序列表，<code>(a,b,c)</code></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown 的使用</title>
     <url>/2020/09/12/markdown-%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用<code>#</code>号表示标题级数，共六级；</p>
@@ -59,10 +178,7 @@
 <li>插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现</li>
 <li>画流程图、时序图(顺序图)、甘特图</li>
 </ul>
-<h1 id="Markdown-All-in-One"><a href="#Markdown-All-in-One" class="headerlink" title="Markdown All in One"></a>Markdown All in One</h1><p><img src="/.io//%20table.png" alt></p>
-<p>test</p>
-
-
+<h1 id="Markdown-All-in-One"><a href="#Markdown-All-in-One" class="headerlink" title="Markdown All in One"></a>Markdown All in One</h1><p><img src="https://github.com/colawong/colawong.github.io/blob/master/source/_posts/markdown-%E7%9A%84%E4%BD%BF%E7%94%A8/%20table.png?raw=true" alt></p>
 <table>
 <thead>
 <tr>
