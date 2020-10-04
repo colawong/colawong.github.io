@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  36
+                  354
                 </span>
               
 
@@ -412,7 +412,81 @@
         
           
             <h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if &lt;条件1&gt;：</span><br><span class="line">    &lt;执行1&gt;</span><br><span class="line">elif&lt;条件2&gt;：</span><br><span class="line">    &lt;执行2&gt;</span><br><span class="line">else:</span><br><span class="line">    &lt;执行3&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if x:</span><br><span class="line">    &lt;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
+<li><code>for x in ... :</code></li>
+<li>while循环<ul>
+<li>break 提前结束循环</li>
+<li>continue 提前结束本轮循环，并直接开始下一轮循环</li>
+</ul>
+</li>
+</ul>
+<h2 id="dict-字典"><a href="#dict-字典" class="headerlink" title="dict 字典"></a>dict 字典</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;a:1,b:2,c:3&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>功能</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>get()</code></td>
+<td>返回key</td>
+<td><code>d.get(&#39;Thomas&#39;)</code></td>
+</tr>
+<tr>
+<td><code>pop()</code></td>
+<td>删除key</td>
+<td><code>d.pop(&#39;Bob&#39;)</code></td>
+</tr>
+</tbody></table>
+<p>和list比较，dict有以下几个特点：</p>
+<ol>
+<li>dict查找和插入的速度极快，不会随着key的增加而变慢；需要占用大量的内存，内存浪费多。</li>
+<li>而list相反：查找和插入的时间随着元素的增加而增加；占用空间小，浪费内存很少。</li>
+<li>dict 的key不可变类型。ps:字符串、整数等都是不可变的,list是可变的</li>
+</ol>
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>set和dict的唯一区别仅在于没有存储对应的value;要创建一个set，需要提供一个list作为输入集合</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; s &#x3D; set([1, 2, 3])</span><br><span class="line">&gt;&gt;&gt; s</span><br><span class="line">&#123;1, 2, 3&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>功能</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>add()</code></td>
+<td>添加元素</td>
+<td><code>s.add(4)</code>ps:可以重复添加，但不会有效果</td>
+</tr>
+<tr>
+<td><code>remove()</code></td>
+<td>删除元素</td>
+<td><code>s.remove(4)</code></td>
+</tr>
+</tbody></table>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rang ()</code></td>
+<td>生成一个整数有序数列</td>
+<td><code>range(5)</code>生成的序列是从0开始小于5的整数</td>
+</tr>
+<tr>
+<td><code>list()</code></td>
+<td>转化成list</td>
+<td><code>list(1,2,3,4,5)</code>转化为<code>[1,2,3,4,5]</code></td>
+</tr>
+</tbody></table>
+
           
         
       
@@ -731,7 +805,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  321
+                  324
                 </span>
               
 
@@ -847,6 +921,10 @@
 <tr>
 <td>pop()</td>
 <td>删除list指定的元素</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>排序</td>
 </tr>
 </tbody></table>
 </li>
