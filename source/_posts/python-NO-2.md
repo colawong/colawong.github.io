@@ -1,10 +1,11 @@
 ---
 title: python-NO-2
 categories:
-  - Diary
+  - Learn
 comments: ture
 date: 2020-09-15 19:17:47
 tags:
+  - python
 ---
 
 ## 条件判断
