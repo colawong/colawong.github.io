@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python-NO-2</title>
+    <url>/2020/09/15/python-NO-2/</url>
+    <content><![CDATA[<h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if &lt;条件1&gt;：</span><br><span class="line">    &lt;执行1&gt;</span><br><span class="line">elif&lt;条件2&gt;：</span><br><span class="line">    &lt;执行2&gt;</span><br><span class="line">else:</span><br><span class="line">    &lt;执行3&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if x:</span><br><span class="line">    &lt;&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+  </entry>
+  <entry>
     <title>关于七星小区停车费-20200914</title>
     <url>/2020/09/14/%E5%85%B3%E4%BA%8E%E4%B8%83%E6%98%9F%E5%B0%8F%E5%8C%BA%E5%81%9C%E8%BD%A6%E8%B4%B9-20200914/</url>
     <content><![CDATA[<h1 id="存在的问题："><a href="#存在的问题：" class="headerlink" title="存在的问题："></a>存在的问题：</h1><ol>
