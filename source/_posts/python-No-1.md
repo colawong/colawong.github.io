@@ -51,6 +51,7 @@ tags:
    append()|追加元素到末尾
    insert（）|在指定位置插入元素
    pop()|删除list指定的元素
+   sort()|排序
 2. `tuple`是初始化后不可变的有序列表，`(a,b,c)`
   
 
