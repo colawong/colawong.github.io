@@ -82,6 +82,33 @@ def 函数名():
       print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw)
     ```
 
+## 递归函数
+一个函数在内部调用自身本身，这个函数就是递归函数。    
+
+              
+```
+#  阶乘
+def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n - 1)
+```    
+    
+
+**栈：** 函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧   
+**尾递归优化：** *解决递归调用栈溢出*   
+```
+def fact(n):
+    return fact_iter(n, 1)
+
+def fact_iter(num, product):
+    if num == 1:
+        return product
+    return fact_iter(num - 1, num * product)   #返回递归函数本身
+```
+    
+
+  
 
 ## 说明
 ```
