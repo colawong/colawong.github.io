@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  686
+                  830
                 </span>
               
 
@@ -445,11 +445,15 @@
 <li><p>参数组合：参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def f1(a, b, c&#x3D;0, *args, **kw):</span><br><span class="line">  print(&#39;a &#x3D;&#39;, a, &#39;b &#x3D;&#39;, b, &#39;c &#x3D;&#39;, c, &#39;args &#x3D;&#39;, args, &#39;kw &#x3D;&#39;, kw)</span><br><span class="line"></span><br><span class="line">def f2(a, b, c&#x3D;0, *, d, **kw):</span><br><span class="line">  print(&#39;a &#x3D;&#39;, a, &#39;b &#x3D;&#39;, b, &#39;c &#x3D;&#39;, c, &#39;d &#x3D;&#39;, d, &#39;kw &#x3D;&#39;, kw)</span><br></pre></td></tr></table></figure>
 
-
 </li>
 </ol>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from 文件名 import 函数名</span><br></pre></td></tr></table></figure>
-
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><p>一个函数在内部调用自身本身，这个函数就是递归函数。    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#  阶乘</span><br><span class="line">def fact(n):</span><br><span class="line">    if n&#x3D;&#x3D;1:</span><br><span class="line">        return 1</span><br><span class="line">    return n * fact(n - 1)</span><br><span class="line">&#96;&#96;&#96;    </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">**栈：** 函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧   </span><br><span class="line">**尾递归优化：** *解决递归调用栈溢出*</span><br></pre></td></tr></table></figure>
+<p>def fact(n):<br>    return fact_iter(n, 1)</p>
+<p>def fact_iter(num, product):<br>    if num == 1:<br>        return product<br>    return fact_iter(num - 1, num * product)   #返回递归函数本身</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">## 说明</span><br></pre></td></tr></table></figure>
+<p>from 文件名 import 函数名</p>
+<pre><code></code></pre>
           
         
       
