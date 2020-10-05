@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>python-NO-3</title>
+    <url>/2020/10/04/python-NO-3/</url>
+    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><p>所有函数见<a href="https://docs.python.org/3/library/functions.html#abs" target="_blank" rel="noopener">官方网站文档</a></p>
+<h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><p>定义一个函数要使用<code>def</code>语句，依次写出函数名、括号、括号中的参数和冒号:，然后，在缩进块中编写函数体，函数的返回值用<code>return</code>语句返回</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def 函数名():</span><br><span class="line">    函数体</span><br><span class="line">    return</span><br></pre></td></tr></table></figure>
+<h3 id="空函数"><a href="#空函数" class="headerlink" title="空函数"></a>空函数</h3><p>一个什么事也不做的空函数，可以用<code>pass</code>语句</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def 函数名():</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+<h4 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h4><ol>
+<li><p>函数执行完毕也没有return语句时，自动return None。</p>
+</li>
+<li><p>函数可以同时返回多个值，但其实就是一个tuple</p>
+</li>
+</ol>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ol>
+<li><p>位置参数：调用函数时根据函数定义的参数位置来传递参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def power(x, n):   #用来计算xn ;x,n都为位置参数</span><br><span class="line"> s &#x3D; 1</span><br><span class="line"> while n &gt; 0:</span><br><span class="line">     n &#x3D; n - 1</span><br><span class="line">     s &#x3D; s * x</span><br><span class="line"> return s</span><br></pre></td></tr></table></figure></li>
+<li><p>默认参数：为参数提供默认值，调用函数时可传可不传该默认参数的值（注意：所有位置参数必须出现在默认参数前，包括函数定义和调用）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def power(x, n&#x3D;2):  #默认计算x2</span><br><span class="line">  s &#x3D; 1</span><br><span class="line">  while n &gt; 0:</span><br><span class="line">    n &#x3D; n - 1</span><br><span class="line">    s &#x3D; s * x</span><br><span class="line">  return s</span><br></pre></td></tr></table></figure>
+<p> <em>默认参数必须指向不变对象</em></p>
+</li>
+<li><p>可变参数：可变参数就是传入的参数个数是可变的。可变参数允许你传入0个或任意个参数，这些可变参数在函数调用时自动组装为一个tuple。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def calc(*numbers): #*号代表可变参数</span><br><span class="line">  sum &#x3D; 0</span><br><span class="line">  for n in numbers:</span><br><span class="line">    sum &#x3D; sum + n * n</span><br><span class="line">  return sum</span><br></pre></td></tr></table></figure>
+<p><code>*tuple</code>号可将list或tuple转为可变参数</p>
+</li>
+<li><p>关键参数：关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict。<strong>作用：*</strong>可以扩展函数的功能*</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def person(name, age, **kw):  #**号表示关键字参数</span><br><span class="line"> print(&#39;name:&#39;, name, &#39;age:&#39;, age, &#39;other:&#39;, kw)</span><br></pre></td></tr></table></figure>
+<p><code>**dict</code>可将dict的所有key-value用关键字参数传入</p>
+</li>
+<li><p>命名关键字参数:限制关键字参数的名字</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def person(name, age, *, city, job):   #命名关键字参数需要一个特殊分隔符*，*后面的参数被视为命名关键字参数</span><br><span class="line">    print(name, age, city, job)</span><br></pre></td></tr></table></figure>
+
+<p><em>缺少<code>*</code>，city和job被视为位置参数</em></p>
+</li>
+<li><p>参数组合：参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def f1(a, b, c&#x3D;0, *args, **kw):</span><br><span class="line">  print(&#39;a &#x3D;&#39;, a, &#39;b &#x3D;&#39;, b, &#39;c &#x3D;&#39;, c, &#39;args &#x3D;&#39;, args, &#39;kw &#x3D;&#39;, kw)</span><br><span class="line"></span><br><span class="line">def f2(a, b, c&#x3D;0, *, d, **kw):</span><br><span class="line">  print(&#39;a &#x3D;&#39;, a, &#39;b &#x3D;&#39;, b, &#39;c &#x3D;&#39;, c, &#39;d &#x3D;&#39;, d, &#39;kw &#x3D;&#39;, kw)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from 文件名 import 函数名</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Learn</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python-NO-2</title>
     <url>/2020/09/15/python-NO-2/</url>
     <content><![CDATA[<h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if &lt;条件1&gt;：</span><br><span class="line">    &lt;执行1&gt;</span><br><span class="line">elif&lt;条件2&gt;：</span><br><span class="line">    &lt;执行2&gt;</span><br><span class="line">else:</span><br><span class="line">    &lt;执行3&gt;</span><br></pre></td></tr></table></figure>
