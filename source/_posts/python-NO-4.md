@@ -10,6 +10,8 @@ tags:
 # 高级特性
 ## 切片
 **取一个list或tuple的部分元素**  
+
+   
 ```
 L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
 L[0:3]  #从索引0开始取，直到索引3为止，但不包括索引3
@@ -17,13 +19,12 @@ L[:3]   #索引是0，可以省略
 L[-2:-1]  #索引倒数第2个，到倒数第1个，倒数第一个元素的索引是-1
 L[::5]   #所有数，每5个取一个
 L[:]   #原样复制一个
-
 ```     
     
-
+     
 ## 迭代
 **遍历我们称为迭代**  
-**可迭代对象:** 通过collections模块的Iterable类型判断   
+**可迭代对象:** 通过collections模块的Iterable类型判断      
 
 ```
 from collections import Iterable
@@ -93,7 +94,10 @@ def fib(max):
         n = n + 1
     return 'done'
 ```
-   生成器函数：    
+   
+
+生成器函数：   
+
 
 ```
 #如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个生成器
@@ -104,8 +108,6 @@ def fib(max):
         a, b = b, a + b
         n = n + 1
     return 'done'
-
-
 #在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行
 ```
 
