@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Cola&#39;s Dad">
 <meta property="og:description" content="高级特性切片取一个list或tuple的部分元素   123456L &#x3D; [&#39;Michael&#39;, &#39;Sarah&#39;, &#39;Tracy&#39;, &#39;Bob&#39;, &#39;Jack&#39;]L[0:3]  #从索引0开始取，直到索引3为止，但不包括索引3L[:3]   #索引是0，可以省略L[-2:-1]  #索引倒数第2个，到倒数第1">
 <meta property="article:published_time" content="2020-10-05T14:06:58.000Z">
-<meta property="article:modified_time" content="2020-12-12T13:03:11.621Z">
+<meta property="article:modified_time" content="2020-12-12T13:41:36.084Z">
 <meta property="article:author" content="Jcy Wong">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -434,7 +434,34 @@
 <p>生成器函数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个生成器</span><br><span class="line">def fib(max):    </span><br><span class="line">    n, a, b &#x3D; 0, 0, 1</span><br><span class="line">    while n &lt; max:</span><br><span class="line">        yield b</span><br><span class="line">        a, b &#x3D; b, a + b</span><br><span class="line">        n &#x3D; n + 1</span><br><span class="line">    return &#39;done&#39;</span><br><span class="line">#在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。<br>方法|功能<br>—|—<br>iter()|创建迭代器对象<br>next()|输出迭代器的下一个元素<br>凡是可作用于for循环的对象都是可迭代对象;<br>凡是可作用于next()函数的对象都是迭代器;</p>
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><h2 id="访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。"><a href="#访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。" class="headerlink" title="访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。"></a>访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iter()</td>
+<td>创建迭代器对象</td>
+</tr>
+<tr>
+<td>next()</td>
+<td>输出迭代器的下一个元素</td>
+</tr>
+<tr>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>凡是可作用于for循环的对象都是可迭代对象;</td>
+<td></td>
+</tr>
+<tr>
+<td>凡是可作用于next()函数的对象都是迭代器;</td>
+<td></td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -628,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高级特性"><span class="nav-number">1.</span> <span class="nav-text">高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#切片"><span class="nav-number">1.1.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代"><span class="nav-number">1.2.</span> <span class="nav-text">迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表生成式"><span class="nav-number">1.3.</span> <span class="nav-text">列表生成式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成器"><span class="nav-number">1.4.</span> <span class="nav-text">生成器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代器"><span class="nav-number">1.5.</span> <span class="nav-text">迭代器</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高级特性"><span class="nav-number">1.</span> <span class="nav-text">高级特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#切片"><span class="nav-number">1.1.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代"><span class="nav-number">1.2.</span> <span class="nav-text">迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表生成式"><span class="nav-number">1.3.</span> <span class="nav-text">列表生成式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成器"><span class="nav-number">1.4.</span> <span class="nav-text">生成器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代器"><span class="nav-number">1.5.</span> <span class="nav-text">迭代器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。"><span class="nav-number">1.6.</span> <span class="nav-text">访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。</span></a></li></ol></li></ol></div>
             
 
           </div>
