@@ -42,48 +42,22 @@
 
 <hr>
 <h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><p>创建list的生成式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#[1x1, 2x2, 3x3, ..., 10x10]</span><br><span class="line">&gt;&gt;&gt; [x * x for x in range(1, 11)]</span><br><span class="line">[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span><br><span class="line">&#96;&#96;&#96;   </span><br><span class="line">   </span><br><span class="line">for循环后面还可以加上if判断，if是一个筛选条件，不能带else</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>[x * x for x in range(1, 11) if x % 2 == 0]<br>[4, 16, 36, 64, 100]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">     </span><br><span class="line"></span><br><span class="line">for前面的if ... else是表达式</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>[x if x % 2 == 0 else -x for x in range(1, 11)]<br>[-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">使用两层循环</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>[m + n for m in ‘ABC’ for n in ‘XYZ’]<br>[‘AX’, ‘AY’, ‘AZ’, ‘BX’, ‘BY’, ‘BZ’, ‘CX’, ‘CY’, ‘CZ’]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">***</span><br><span class="line">## 生成器</span><br><span class="line">一边循环一边计算的机制，称为生成器，保存的是算法。  </span><br><span class="line"></span><br><span class="line">函数：</span><br></pre></td></tr></table></figure>
-<p>#斐波拉契数列 1, 1, 2, 3, 5, 8, 13, 21, 34, …<br>def fib(max):<br>    n, a, b = 0, 0, 1<br>    while n &lt; max:<br>        print(b)<br>        a, b = b, a + b<br>        n = n + 1<br>    return ‘done’</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   </span><br><span class="line"></span><br><span class="line">生成器函数：</span><br></pre></td></tr></table></figure>
-<p>#如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个生成器<br>def fib(max):<br>    n, a, b = 0, 0, 1<br>    while n &lt; max:<br>        yield b<br>        a, b = b, a + b<br>        n = n + 1<br>    return ‘done’<br>#在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行</p>
-<pre><code>
-***   
-## 迭代器
-访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。   
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#[1x1, 2x2, 3x3, ..., 10x10]</span><br><span class="line">&gt;&gt;&gt; [x * x for x in range(1, 11)]</span><br><span class="line">[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span><br></pre></td></tr></table></figure>
 
-
-方法|功能
----|---
-iter()|创建迭代器对象
-next()|输出迭代器的下一个元素
-
-
-凡是可作用于for循环的对象都是可迭代对象;
-凡是可作用于next()函数的对象都是迭代器;</code></pre>]]></content>
+<p>for循环后面还可以加上if判断，if是一个筛选条件，不能带else</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; [x * x for x in range(1, 11) if x % 2 &#x3D;&#x3D; 0]</span><br><span class="line">[4, 16, 36, 64, 100]</span><br></pre></td></tr></table></figure>
+<p>for前面的if … else是表达式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; [x if x % 2 &#x3D;&#x3D; 0 else -x for x in range(1, 11)]</span><br><span class="line">[-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]</span><br></pre></td></tr></table></figure>
+<p>使用两层循环</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; [m + n for m in &#39;ABC&#39; for n in &#39;XYZ&#39;]</span><br><span class="line">[&#39;AX&#39;, &#39;AY&#39;, &#39;AZ&#39;, &#39;BX&#39;, &#39;BY&#39;, &#39;BZ&#39;, &#39;CX&#39;, &#39;CY&#39;, &#39;CZ&#39;]</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>一边循环一边计算的机制，称为生成器，保存的是算法。<br>函数：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#斐波拉契数列 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</span><br><span class="line">def fib(max):</span><br><span class="line">    n, a, b &#x3D; 0, 0, 1</span><br><span class="line">    while n &lt; max:</span><br><span class="line">        print(b)</span><br><span class="line">        a, b &#x3D; b, a + b</span><br><span class="line">        n &#x3D; n + 1</span><br><span class="line">    return &#39;done&#39;</span><br></pre></td></tr></table></figure>
+<p>生成器函数：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个生成器</span><br><span class="line">def fib(max):    </span><br><span class="line">    n, a, b &#x3D; 0, 0, 1</span><br><span class="line">    while n &lt; max:</span><br><span class="line">        yield b</span><br><span class="line">        a, b &#x3D; b, a + b</span><br><span class="line">        n &#x3D; n + 1</span><br><span class="line">    return &#39;done&#39;</span><br><span class="line">#在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>访问集合元素的一种方式，是一个可以记住遍历的位置的对象。迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。迭代器只能往前不会后退。<br>方法|功能<br>—|—<br>iter()|创建迭代器对象<br>next()|输出迭代器的下一个元素<br>凡是可作用于for循环的对象都是可迭代对象;<br>凡是可作用于next()函数的对象都是迭代器;</p>
+]]></content>
       <categories>
         <category>Learn</category>
       </categories>
